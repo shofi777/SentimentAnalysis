@@ -23,7 +23,7 @@ emotion_offsets = (20, 40)
 # loading models
 face_cascade = cv2.CascadeClassifier('./models/face_box.xml')
 emotion_classifier = load_model(emotion_model_path)
-graph = tf.get_default_graph()
+graph = tf.compat.v1.get_default_graph()
 
 
 # getting input model shapes for inference
